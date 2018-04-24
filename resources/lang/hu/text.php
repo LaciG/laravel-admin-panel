@@ -1,7 +1,7 @@
 <?php
     return [
         //Language Selector
-        'welcome' => 'Üdv a laravel nyelvválasztó menüjében',
+        'welcome' => 'ez lesz a drukka kinti oldal',
         //FrontEnd
             //Home
             //Startup

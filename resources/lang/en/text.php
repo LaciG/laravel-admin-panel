@@ -1,7 +1,7 @@
 <?php
     return [
         //Language Selector
-        'welcome' => 'Welcome to laravel language selector',
+        'welcome' => 'This will be the main site',
         //FrontEnd
             //Home
             //Startup
