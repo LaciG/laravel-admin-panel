@@ -75,5 +75,14 @@
             @yield('content')
         </main>
     </div>
+    <script src="//cdn.ckeditor.com/4.9.1/standard/ckeditor.js"></script>
+    <script type="text/javascript">
+         CKEDITOR.replace( 'messageArea',
+         {
+             enterMode: Number(2),
+          customConfig : 'config.js',
+          toolbar : 'simple'
+          })
+</script> 
 </body>
 </html>

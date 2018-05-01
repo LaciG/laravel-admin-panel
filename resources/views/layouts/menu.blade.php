@@ -19,7 +19,15 @@
                 </div>
                 <hr>
 
-                <a href=' {{ url("/blogarticles") }} '>Blog</a>
+                <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Blog
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a href=' {{ url("/blogarticles") }} '>Cikkek</a></li>
+                          <li><a href=' {{ url("/addarticle") }} '>Cikk létrehozása</a>
+                          <li><a href=' {{ url("/category") }} '>Kategória hozzáadása</a></li>
+                        </ul>
+                </div>
                 <hr>
 
                 <div class="dropdown">
