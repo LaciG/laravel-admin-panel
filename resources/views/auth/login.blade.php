@@ -58,6 +58,8 @@
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {!! __('text.adminLoginForgotPassword') !!}
                                 </a>
+
+                                <a class="btn btn-primary">Vissza az oldalra</a>
                             </div>
                         </div>
                     </form>
