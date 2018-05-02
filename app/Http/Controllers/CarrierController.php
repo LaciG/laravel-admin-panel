@@ -18,4 +18,16 @@ class CarrierController extends Controller
 
         return view('carrierview', ['joblink' => $joblink]);
     }
+
+    /* public function store(Request $request) {
+        $this->validate($request, [
+            '' => 'required',
+            '' => 'required',
+            '' => 'required',
+            '' => 'required',
+            '' => 'required',
+        ]);
+
+        return redirect('/carrier)->with('response', 'Sikeres jelentkezés');
+    } */
 }

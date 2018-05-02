@@ -17,7 +17,7 @@ class JobApplySeeder extends Seeder
         $faker = Faker::create();
         $applies = [];
 
-        foreach(range(1, 5) as $index) {
+        foreach(range(1, 20) as $index) {
             $applies[] = [
             'apply_name' => $faker->name,
             'apply_email' => $faker->email,

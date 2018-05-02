@@ -27,7 +27,23 @@
                         </div>
                     @endif
 
-                    
+                    <table width="100%" border="1">
+                        <tr>
+                            <td>Mire jelentkezett</td><td>Név</td><td>Bérigény</td><td>Telefon</td><td>CV Link</td><td>Művelet</td>
+                        </tr>
+                        @if(count($applies) > 0)
+                            @foreach($applies->all() as $apply)
+                        <tr>
+                            <td> {{ $apply->apply_job }} </td><td> {{ $apply->apply_name }} </td><td> {{ $apply->apply_salary }} </td><td> {{ $apply->apply_mobile }} </td><td> <a href="{{ $apply->apply_resume }}" target="_blank"> Megtekintés </a></td><td>Művelet</td>
+                        </tr>
+                            @endforeach
+                        @else
+                            <tr>
+                                <td colspan="6">Nincsenek jelentkezések</td>
+                            </tr>
+                        @endif
+                    </table>
+                    {{ $applies->links() }}
                 </div>
             </div>
         </div>

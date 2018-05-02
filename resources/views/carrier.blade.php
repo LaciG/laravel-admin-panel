@@ -73,6 +73,7 @@
                 </div>
             @endforeach
         @endif
+        {{ $joblist->links() }}
     </div>
 
     <!-- Bootstrap core JavaScript -->

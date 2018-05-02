@@ -60,6 +60,17 @@
 
     <!-- Page Content -->
     <div class="container">
+            @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @endif
+
+        @if(session('response'))
+            <div class="alert alert-success">
+                {{ session('response') }}
+            </div>
+         @endif
             @if(count($joblink) > 0)
             @foreach($joblink->all() as $job)
             <div class="row">

@@ -27,32 +27,36 @@ Route::get('/', function () {
 
     Route::get('/carrier/{id}', 'CarrierController@show');
 
+    Route::post('/carrier{id}', 'CarrierController@store');
+
 Auth::routes();
+//Főoldal
+    Route::get('/home', 'HomeController@index')->name('home');
+//Felhasználók kezelése
+    Route::get('/users', 'UsersController@index');
+//Állás kezelés
+    Route::get('/openjobs', 'OpenJobsController@index');
 
-Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/addjob', 'OpenJobsController@create');
 
-Route::get('/users', 'UsersController@index');
+    Route::get('/jobapplication', 'JobApplicationController@index');
+//Blog kezelés
+    Route::get('/blogarticles', 'BlogArticlesController@index');
 
-Route::get('/openjobs', 'OpenJobsController@index');
+    Route::get('/addarticle', 'BlogArticlesController@create');
 
-Route::get('/jobapplication', 'JobApplicationController@index');
+    Route::post('/storearticle', 'BlogArticlesController@store');
 
-Route::get('/blogarticles', 'BlogArticlesController@index');
+    Route::get('/article/{id}', 'BlogArticlesController@view');
 
-Route::get('/addarticle', 'BlogArticlesController@create');
+    Route::post('/article/{id}', 'BlogArticlesController@edit');
 
-Route::post('/storearticle', 'BlogArticlesController@store');
+    Route::get('/deletearticle/{id}', 'BlogArticlesController@destroy');
+//Kategória kezelés
+    Route::get('/category', 'CategoryController@create');
 
-Route::get('/article/{id}', 'BlogArticlesController@view');
+    Route::post('/addCategory', 'CategoryController@store');
+//GDPR Kezelés
+    Route::get('/gdprsettings', 'GdprSettingsController@index');
 
-Route::post('/article/{id}', 'BlogArticlesController@edit');
-
-Route::get('/deletearticle/{id}', 'BlogArticlesController@destroy');
-
-Route::get('/category', 'CategoryController@create');
-
-Route::post('/addCategory', 'CategoryController@store');
-
-Route::get('/gdprsettings', 'GdprSettingsController@index');
-
-Route::get('/gdprstatistics', 'GdprStatisticsController@index');
+    Route::get('/gdprstatistics', 'GdprStatisticsController@index');

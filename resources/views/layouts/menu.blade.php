@@ -13,6 +13,7 @@
                     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Állás
                     <span class="caret"></span></button>
                     <ul class="dropdown-menu">
+                        <li><a href=' {{ url("/addjob") }} '>Állás Feladása</a></li>
                         <li><a href=' {{ url("/openjobs") }} '>Meghirdetett állások</a></li>
                         <li><a href=' {{ url("/jobapplication") }} '>Állásjelentkezések</a></li>
                     </ul>

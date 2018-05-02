@@ -6,7 +6,7 @@
         @include('layouts.menu')
         <div class="col-md-9">
             <div class="card">
-                <div class="card-header">Meghirdetett állások</div>
+                <div class="card-header">Állás Feladása</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -27,20 +27,7 @@
                         </div>
                     @endif
 
-                    <table width="100%" border="1">
-                        <tr>
-                            <td>Pozíció</td><td>Helye</td><td>Típusa</td><td>Munkavégzés</td><td>Szint</td><td>Interakció</td>
-                        </tr>
-                        @if(count($openjobs) > 0)
-                            @foreach($openjobs->all() as $job)
-                            <tr>
-                                <td> {{ $job->job_title }} </td><td> {{ $job->job_place }} </td><td> {{ $job->job_type }} </td><td> {{ $job->job_time }} </td><td> {{ $job->job_level }} </td><td>Interact</td>
-                            </tr>
-                            @endforeach
-                        @else
-                        @endif
-                    </table>
-                    {{ $openjobs->links() }}
+                    
                 </div>
             </div>
         </div>
