@@ -27,20 +27,46 @@
                         </div>
                     @endif
 
-                    <table>
-                        <tr>
-                            <td>1</td><td>1</td><td>1</td><td>1</td>
+                    <table width="100%" border="1">
+                        <tr class="card-header">
+                            <td colspan="2">Blog bejegyzések</td>
                         </tr>
+                        <tr>
+                            <td>Cím</td><td>Kategória</td>
+                        </tr>
+                        @if(count($bloglist) > 0)
+                            @foreach($bloglist->all() as $blog)
+                                <tr>
+                                    <td> {{ $blog->blog_title }} </td><td> {{ $blog->blog_category }} </td>
+                                </tr>
+                            @endforeach
+                        @else
+                        semmi
+                        @endif
                     <table>
 
-                    <table>
-                        <tr>
-                            <td>1</td><td>1</td><td>1</td><td>1</td>
+                    <table width="100%" border="1">
+                        <tr class="card-header">
+                            <td colspan="2">Aktív álláshirdetések</td>
                         </tr>
+                        <tr>
+                            <td>Állás neve</td><td>Típusa</td>
+                        </tr>
+                        @if(count($joblist) > 0)
+                            @foreach($joblist->all() as $job )
+                                <tr>
+                                    <td> {{ $job->job_title }} </td><td> {{ $job->job_type }} </td>
+                                </tr>
+                            @endforeach
+                        @else
+                        semmi
+                        @endif
                     <table>
                 </div>
             </div>
         </div>
+        
     </div>
+    
 </div>
 @endsection
