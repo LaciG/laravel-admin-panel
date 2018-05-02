@@ -18,6 +18,6 @@ class GdprSettingsController extends Controller
 
     public function index() {
 
-        return view('gdprsettings');
+        return view('admin.gdprsettings');
     }
 }

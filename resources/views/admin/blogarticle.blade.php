@@ -34,7 +34,7 @@
                         @if(count($bloglist) > 0)
                             @foreach($bloglist->all() as $blog)
                                 <tr>
-                                    <td> {{ $blog->blog_title }} </td><td> {{ $blog->blog_category }} </td><td> {{ $blog->language }} </td><td> {{ $blog->created_at }} </td><td><a href=' {{ url("/deletearticle/{$blog->id}") }} ' onclick="return confirm('Biztos, hogy törlöd a {{ $blog->blog_title }} cikket? ')">Törlés</a></td>
+                                    <td><a href=' {{ url("/article/$blog->id") }} '> {{ $blog->blog_title }} </a></td><td> {{ $blog->blog_category }} </td><td> {{ $blog->language }} </td><td> {{ $blog->created_at }} </td><td><a href=' {{ url("/deletearticle/{$blog->id}") }} ' onclick="return confirm('Biztos, hogy törlöd a {{ $blog->blog_title }} cikket? ')">Törlés</a></td>
                                 </tr>
                             @endforeach
                             {{ $bloglist->links() }}

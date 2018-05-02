@@ -18,6 +18,6 @@ class JobApplicationController extends Controller
 
     public function index() {
 
-        return view('jobapplication');
+        return view('admin.jobapplication');
     }
 }

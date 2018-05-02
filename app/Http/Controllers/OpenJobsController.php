@@ -18,6 +18,6 @@ class OpenJobsController extends Controller
 
     public function index() {
 
-        return view('openjobs');
+        return view('admin.openjobs');
     }
 }

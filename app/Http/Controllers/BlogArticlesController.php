@@ -28,12 +28,12 @@ class BlogArticlesController extends Controller
 
         $bloglist = DB::table('blog')->orderBy('created_at', 'desc')->paginate(5);        
 
-        return view('blogarticle', ['bloglist' =>$bloglist]);
+        return view('admin.blogarticle', ['bloglist' =>$bloglist]);
     }
 
     public function create() {
         $categories = Category::all();
-        return view('addblogarticle', ['categories' => $categories]);
+        return view('admin.addblogarticle', ['categories' => $categories]);
     }
 
     public function store(Request $request) {
@@ -84,7 +84,7 @@ class BlogArticlesController extends Controller
         $blogpost = Blog::find($id);
         $category = Category::find($blogpost->categoryId);
 
-        return view('editblogarticle', ['categories' => $categories, 'blogpost' => $blogpost, 'category' => $category]);
+        return view('admin.editblogarticle', ['categories' => $categories, 'blogpost' => $blogpost, 'category' => $category]);
     }
 
     public function edit(Request $request, $id) {
