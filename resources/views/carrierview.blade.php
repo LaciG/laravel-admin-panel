@@ -60,23 +60,57 @@
 
     <!-- Page Content -->
     <div class="container">
-        @if(count($bloglist) > 0)
-            @foreach($bloglist->all() as $blog)
-                <div class="row">
+            @if(count($joblink) > 0)
+            @foreach($joblink->all() as $job)
+            <div class="row">
                     <div class="col-lg-12 text-center">
-                        <img class="img-fluid" src="{{ $blog->blog_cover_image }}" alt=" {{ $blog->blog_cover_image_alt }} ">
-                        <h1 class="mt-5">{{ $blog->blog_title }}</h1>
-                        <p class="lead">{{ $blog->blog_start_post }}</p>
-                        <ul class="list-unstyled">
-                            <li><a href=' {{ url("/blog/{$blog->id}") }} '>Tovább olvasom</a></li>
-                        </ul>
+                      <h1 class="mt-5">{{ $job->job_title }}</h1>
+                      <p class="lead">{{ $job->job_description }}<br></p>
+                      <p>
+                          <table align="center" border="1">
+                              <tr>
+                                  <td>Munkavégzés helye: </td><td>Típusa</td><td>Munkaidő</td><td>Szükséges szint</td>
+                              </tr>
+                              <tr>
+                                  <td> {{ $job->job_place }} </td><td> {{ $job->job_type }} </td><td> {{ $job->job_time }} </td><td> {{ $job->job_level }} </td>
+                              </tr>
+                          </table>
+                      </p>
+                      <p class="lead">
+                          Jó ha tudod: <br>
+                          {{ $job->job_goodtoknow }}
+                      </p>
+                      <ul class="list-unstyled">
+                        <li><a href=' {{ url("/carrier") }} '>Vissza</a></li>
+                        <li><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Jelentkezem</button></li>
+                      </ul>
                     </div>
-                </div>
+                  </div>
             @endforeach
         @endif
-
-        {{ $bloglist->links() }}
     </div>
+
+    <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default">Send</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

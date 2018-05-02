@@ -17,9 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/blog', 'BlogController@index');
+//Blog linkek
+    Route::get('/blog', 'BlogController@index');
 
-Route::get('/blog/{id}', 'BlogController@show');
+    Route::get('/blog/{id}', 'BlogController@show');
+
+//Karrier Linkek
+    Route::get('/carrier', 'CarrierController@index');
+
+    Route::get('/carrier/{id}', 'CarrierController@show');
 
 Auth::routes();
 

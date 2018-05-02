@@ -45,10 +45,10 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href=' {{ url("/blog") }} '>Blog</a>
+                <a class="nav-link" href=' {{ url("/blog") }} '>Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href=' {{url("/carrier") }} '>Karrier</a>
+                <a class="nav-link" href=' {{url("/carrier") }} '>Karrier</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
@@ -60,20 +60,18 @@
 
     <!-- Page Content -->
     <div class="container">
-            @if(count($blogpost) > 0)
-            @foreach($blogpost->all() as $blog)
-      <div class="row">
-        <div class="col-lg-12 text-center">
-                <img class="img-fluid" src="{{ $blog->blog_cover_image }}" alt=" {{ $blog->blog_cover_image_alt }} ">
-          <h1 class="mt-5">{{ $blog->blog_title }}</h1>
-          <p class="lead">{{ $blog->blog_start_post }}</p>
-          <p class="lead">{!! $blog->blog_rest_post !!}</p>
-          <ul class="list-unstyled">
-            <li><a href=' {{ url("/blog") }} '>VISSZA</a></li>
-          </ul>
-        </div>
-      </div>
-      @endforeach
+        @if(count($joblist) > 0)
+            @foreach($joblist->all() as $job)
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                    <h1 class="mt-5">{{ $job->job_title }}</h1>
+                    <p class="lead">{{ $job->job_description }}</p>
+                    <ul class="list-unstyled">
+                        <li><a href=' {{ url("/carrier/{$job->id}") }} '>Bővebben</a></li>
+                    </ul>
+                    </div>
+                </div>
+            @endforeach
         @endif
     </div>
 
