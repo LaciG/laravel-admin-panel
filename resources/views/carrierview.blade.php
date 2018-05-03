@@ -76,7 +76,7 @@
             <div class="row">
                     <div class="col-lg-12 text-center">
                       <h1 class="mt-5">{{ $job->job_title }}</h1>
-                      <p class="lead">{{ $job->job_description }}<br></p>
+                      <p class="lead">{!! $job->job_description !!}<br></p>
                       <p>
                           <table align="center" border="1">
                               <tr>
@@ -89,7 +89,7 @@
                       </p>
                       <p class="lead">
                           Jó ha tudod: <br>
-                          {{ $job->job_goodtoknow }}
+                          {!! $job->job_goodtoknow !!}
                       </p>
                       <ul class="list-unstyled">
                         <li><a href=' {{ url("/carrier") }} '>Vissza</a></li>

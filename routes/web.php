@@ -39,6 +39,8 @@ Auth::routes();
 
     Route::get('/addjob', 'OpenJobsController@create');
 
+    Route::post('/addjob', "OpenJobsController@store");
+
     Route::get('/jobapplication', 'JobApplicationController@index');
 //Blog kezelés
     Route::get('/blogarticles', 'BlogArticlesController@index');

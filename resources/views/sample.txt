@@ -45,10 +45,10 @@
               </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href=' {{ url("/blog") }} '>Blog</a>
+              <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href=' {{url("/carrier") }} '>Karrier</a>
+              <a class="nav-link" href="#">Services</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
@@ -60,20 +60,16 @@
 
     <!-- Page Content -->
     <div class="container">
-        @if(count($joblist) > 0)
-            @foreach($joblist->all() as $job)
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                    <h1 class="mt-5">{{ $job->job_title }}</h1>
-                    <p class="lead">{!! $job->job_description !!}</p>
-                    <ul class="list-unstyled">
-                        <li><a href=' {{ url("/carrier/{$job->id}") }} '>Bővebben</a></li>
-                    </ul>
-                    </div>
-                </div>
-            @endforeach
-        @endif
-        {{ $joblist->links() }}
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-5">A Bootstrap 4 Starter Template</h1>
+          <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
+          <ul class="list-unstyled">
+            <li>Bootstrap 4.0.0</li>
+            <li>jQuery 3.3.0</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <!-- Bootstrap core JavaScript -->
