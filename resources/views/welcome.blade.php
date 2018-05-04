@@ -1,114 +1,135 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+  <head>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+    <title>Bare - Start Bootstrap Template</title>
 
-            .full-height {
-                height: 100vh;
-            }
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+    <!-- Custom styles for this template -->
+    <style>
+      body {
+        padding-top: 54px;
+      }
+      @media (min-width: 992px) {
+        body {
+          padding-top: 56px;
+        }
+      }
 
-            .position-ref {
-                position: relative;
-            }
+    </style>
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+  </head>
 
-            .content {
-                text-align: center;
-            }
+  <body>
 
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href=' {{ url("/") }} '>Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href='#'>Startup</a>
+            </li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <a href="#" class="nav-link" data-toggle="dropdown">
+                    Szolgáltatások
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item">
+                        <a href="#">Marketing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">App Fejlesztés</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Grafikai Munkák</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Webfejlesztés</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href='#'>GDPR</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href=' {{url("/carrier") }} '>Karrier</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href=' {{ url("/blog") }} '>Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Kapcsolat</a>
+            </li>
+            @if (Route::has('login'))
+                @auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/home') }}">Home</a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">Register</a>
+                    </li>
+                @endauth
+            @endif
+            <li class="dropdown">
+                <a href="#" class="nav-link" data-toggle="dropdown">
                     {{ Config::get('languages')[App::getLocale()] }}
                 </a>
                 <ul class="dropdown-menu">
                     @foreach (Config::get('languages') as $lang => $language)
                         @if ($lang != App::getLocale())
-                            <li>
+                            <li class="nav-item">
                                 <a href="{{ route('lang.switch', $lang) }}">{{$language}}</a>
                             </li>
                         @endif
                     @endforeach
                 </ul>
             </li>
-
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    {!! __('text.welcome') !!}
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-                <div class="links">
-                    <a href="{{ url('/blog') }}">Blog</a>
-                </div>
-            </div>
+          </ul>
         </div>
-    </body>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-5">{!! __('text.welcome') !!}</h1>
+          {{--  <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
+          <ul class="list-unstyled">
+            <li>Bootstrap 4.0.0</li>
+            <li>jQuery 3.3.0</li>
+          </ul>  --}}
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
 </html>

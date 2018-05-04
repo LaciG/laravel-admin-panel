@@ -32,31 +32,84 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href=' {{ url("/blog") }} '>Blog</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href=' {{url("/carrier") }} '>Karrier</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
+        <div class="container">
+          <a class="navbar-brand" href="#">Start Bootstrap</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href=' {{ url("/") }} '>Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href='#'>Startup</a>
+              </li>
+              <li class="dropdown">
+                  <a href="#" class="nav-link" data-toggle="dropdown">
+                      Szolgáltatások
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li class="nav-item">
+                          <a href="#">Marketing</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#">App Fejlesztés</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#">Grafikai Munkák</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="#">Webfejlesztés</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href='#'>GDPR</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href=' {{url("/carrier") }} '>Karrier</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href=' {{ url("/blog") }} '>Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Kapcsolat</a>
+              </li>
+              @if (Route::has('login'))
+                  @auth
+                      <li class="nav-item">
+                          <a class="nav-link" href="{{ url('/home') }}">Home</a>
+                      </li>
+                  @else
+                      <li class="nav-item">
+                          <a class="nav-link" href="{{ route('login') }}">Login</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="{{ route('register') }}">Register</a>
+                      </li>
+                  @endauth
+              @endif
+              <li class="dropdown">
+                  <a href="#" class="nav-link" data-toggle="dropdown">
+                      {{ Config::get('languages')[App::getLocale()] }}
+                  </a>
+                  <ul class="dropdown-menu">
+                      @foreach (Config::get('languages') as $lang => $language)
+                          @if ($lang != App::getLocale())
+                              <li class="nav-item">
+                                  <a href="{{ route('lang.switch', $lang) }}">{{$language}}</a>
+                              </li>
+                          @endif
+                      @endforeach
+                  </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
     <!-- Page Content -->
     <div class="container">

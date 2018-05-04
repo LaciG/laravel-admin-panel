@@ -34,7 +34,7 @@
                         @if(count($openjobs) > 0)
                             @foreach($openjobs->all() as $job)
                             <tr>
-                                <td> {{ $job->job_title }} </td><td> {{ $job->job_place }} </td><td> {{ $job->job_type }} </td><td> {{ $job->job_time }} </td><td> {{ $job->job_level }} </td><td>Interact</td>
+                                <td><a href=' {{ url("/editjob/$job->id") }} '> {{ $job->job_title }}</a></td><td> {{ $job->job_place }} </td><td> {{ $job->job_type }} </td><td> {{ $job->job_time }} </td><td> {{ $job->job_level }} </td><td><a href=' {{ url("/deletejob/{$job->id}") }} ' onclick="return confirm('Biztos, hogy törlöd a {{ $job->job_title }} Álláshirdetést? ')">Törlés</a></td>
                             </tr>
                             @endforeach
                         @else
