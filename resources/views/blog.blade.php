@@ -129,6 +129,7 @@
         @endif
 
         {{ $bloglist->links() }}
+        @include('content.contact')
     </div>
 
     <!-- Bootstrap core JavaScript -->

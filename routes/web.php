@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Főoldal linkek
+    Route::post('/contact', 'IndexController@store');
+
 //Blog linkek
     Route::get('/blog', 'BlogController@index');
 

@@ -128,6 +128,7 @@
       </div>
       @endforeach
         @endif
+        @include('content.contact')
     </div>
 
     <!-- Bootstrap core JavaScript -->

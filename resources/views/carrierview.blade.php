@@ -207,6 +207,7 @@
     </div>
 
   </div>
+  @include('content.contact')
 </div>
 
     <!-- Bootstrap core JavaScript -->

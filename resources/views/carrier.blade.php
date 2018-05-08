@@ -144,6 +144,7 @@
             @endforeach
         @endif
         {{ $joblist->links() }}
+        @include('content.contact')
     </div>
 
     <!-- Bootstrap core JavaScript -->
