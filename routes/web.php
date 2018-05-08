@@ -27,7 +27,7 @@ Route::get('/', function () {
 
     Route::get('/carrier/{id}', 'CarrierController@show');
 
-    Route::post('/carrier{id}', 'CarrierController@store');
+    Route::post('/carrier', 'CarrierController@store');
 
 Auth::routes();
 //Főoldal

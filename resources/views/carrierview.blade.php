@@ -113,10 +113,16 @@
 
     <!-- Page Content -->
     <div class="container">
-            @if (session('status'))
+        @if (session('status'))
             <div class="alert alert-success">
                 {{ session('status') }}
             </div>
+        @endif
+
+        @if(count($errors) > 0)
+            @foreach($errors->all() as $error)
+                <div class="alert alert-danger"> {{ $error }} </div>
+            @endforeach
         @endif
 
         @if(session('response'))
@@ -160,17 +166,44 @@
 
     <!-- Modal content-->
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default">Send</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
+        @if(count($joblink) > 0)
+            @foreach($joblink->all() as $job)
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Jelentkezés a {{ $job->job_title }} pozícióra</h4>
+                </div>
+                <div class="modal-body">
+                    <form method="post" action=" {{ url('/carrier') }} " enctype="multipart/form-data">
+                        @csrf
+                    <p>
+                        <input type="hidden" name="job_title" value=" {{ $job->job_title }} " />
+                        Név: <br>
+                        <input type="text" name="name" />
+                    </p>
+                    <p>
+                        E-mail cím: <br>
+                        <input type="email" name="email" />
+                    </p>
+                    <p>
+                        Telefonszám: <br>
+                        <input type="number" name="mobile" />
+                    </p>
+                    <p>
+                        Fizetési igény: <br>
+                        <input type="text" name="salary" />
+                    </p>
+                    <p>
+                        Önéletrajz: <br>
+                        <input type="file" name="resume" />
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-default">Send</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            @endforeach
+        @endif
+    </form>
     </div>
 
   </div>
