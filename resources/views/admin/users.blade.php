@@ -27,7 +27,19 @@
                         </div>
                     @endif
 
-                    
+                    <table width="100%">
+                        <tr>
+                            <td>Név: </td><td>E-mail cím: </td><td>Regisztrálva: </td>
+                        </tr>
+                        @if(count($users) > 0)
+                            @foreach($users->all() as $user)
+                                <tr>
+                                    <td> {{ $user->name }} </td><td> {{ $user->email }} </td><td> {{ $user->created_at }} </td>
+                                </tr>
+                            @endforeach
+                        @endif
+                    </table>
+                    {{ $users->links() }}
                 </div>
             </div>
         </div>

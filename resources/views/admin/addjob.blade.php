@@ -6,7 +6,7 @@
         @include('layouts.menu')
         <div class="col-md-9">
             <div class="card">
-                <div class="card-header">Cikk hozzáadása</div>
+                <div class="card-header">Állás feladása</div>
 
                 <div class="card-body">
                     @if (session('status'))

@@ -74,7 +74,7 @@
                                 <label for="blog_start_post" class="col-md-2 col-form-label text-md-right">{{ __('Cikk bevezető') }}</label>
 
                                 <div class="col-md-10">
-                                    <textarea id="blog_start_post" rows="5" class="form-control{{ $errors->has('blog_start_post') ? ' is-invalid' : '' }}" name="blog_start_post" value="{{ old('blog_start_post') }}" required></textarea>
+                                    <textarea id="blog_start_post" rows="5" class="form-control ckeditor{{ $errors->has('blog_start_post') ? ' is-invalid' : '' }}" name="blog_start_post" value="{{ old('blog_start_post') }}" required></textarea>
 
                                     @if ($errors->has('blog_start_post'))
                                         <span class="invalid-feedback">
