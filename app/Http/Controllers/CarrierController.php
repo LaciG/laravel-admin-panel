@@ -48,7 +48,7 @@ class CarrierController extends Controller
             $message->subject('Állásjelentkezés a ' . $data['job'] . ' pozícióra');
             $message->from($data['email']);
             $message->attach($data['resume']->getRealPath(), array(
-                'as' => $data['name'] . $data['resume']->getClientOriginalExtension(),
+                'as' => $data['name'] . '.' . $data['resume']->getClientOriginalExtension(),
                 'mime' => $data['resume']->getMimeType())
             );
         });
@@ -64,9 +64,7 @@ class CarrierController extends Controller
         if(Input::hasFile('resume')) {
 
             $file = Input::file('resume');
-            $file->move(public_path().'/resumes',
-            $file->getClientOriginalName());
-            
+            Input::file('resume')->move(public_path().'/resumes', $data['name'] . '.' . $data['resume']->getClientOriginalExtension());            
             $url = URL::to("/") . '/resumes/' .
             $file->getClientOriginalName();
         }
