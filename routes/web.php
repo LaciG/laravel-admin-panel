@@ -70,4 +70,6 @@ Auth::routes();
 //GDPR Kezelés
     Route::get('/gdprsettings', 'GdprSettingsController@index');
 
+    Route::post('/gdprsettings/{id}/edit', 'GdprSettingsController@edit');
+
     Route::get('/gdprstatistics', 'GdprStatisticsController@index');

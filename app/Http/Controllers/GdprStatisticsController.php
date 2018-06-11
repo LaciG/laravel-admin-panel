@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class GdprStatisticsController extends Controller
 {
@@ -17,7 +18,19 @@ class GdprStatisticsController extends Controller
     }
 
     public function index() {
+        $workersLessThan30Count = DB::table('gdpr_statistic')->where('workers', 'Kevesebb mint 30')->count();
+        $workersBetweenCount = DB::table('gdpr_statistic')->where('workers', '31-249')->count();
+        $workersMoreThan249Count = DB::table('gdpr_statistic')->where('workers', 'Több, mint 249')->count();
+        
 
-        return view('admin.gdprstatistics');
+
+        $data = array(
+            'workersLessThan30Count' => $workersLessThan30Count,
+            'workersBetweenCount' => $workersBetweenCount,
+            'workersMoreThan249Count' => $workersMoreThan249Count,
+            
+        );
+
+        return view('admin.gdprstatistics', ['data' => $data]);
     }
 }
