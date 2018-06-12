@@ -1,156 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
+        <head>
 
-  <head>
+                <!-- Import Google Icon Font -->
+                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            
+                <!-- Import materialize.css -->
+                <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection"/>
+            
+                <!-- owl carousel -->
+                <link rel="stylesheet" href="/css/owl.carousel.min.css">
+                <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+            
+                <!-- Custom CSS -->
+                <link rel="stylesheet" href="/css/custom.css?v=1.23">
+                <link rel="stylesheet" href="/css/gdpr.css?v=3.35">
+                
+                <!-- Animate CSS -->
+                <link rel="stylesheet" href="/css/animate.css">
+                
+                <!-- Import font-awesome.css -->
+                <link rel="stylesheet" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+                        
+                <!-- favicon -->
+                <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+                <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+            
+                <!-- Let browser know website is optimized for mobile -->
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                <meta charset="utf-8">
+                <meta name="Description" content="Kezd el karrieredet a Drukka Startup Studiónál.
+                Dolgozz velünk együtt, a jövő sikeres startupjain! Fiatalos közeg, nagy önállóság és rengetek új kihívás!">
+                <meta name="Keywords" content="">
+                <meta name="robots" content="index, follow">
+                <meta name="revisit-after" content="1 days">
+                <meta name="author" content="Drukka Startup Studio">
+                <meta property="og:image" content="https://drukka.hu/assets/img/drukka_thumbnail.jpg">
+                <title>Drukka Startup Studio karrier</title>
+            
+            <!-- cookie -->
+            <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+            <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+            <!-- <script>
+            window.addEventListener("load", function(){
+            window.cookieconsent.initialise({
+              "palette": {
+                "popup": {
+                  "background": "rgba(0, 0, 0, 0.8)",
+                  "text": "#ffffff"
+                },
+                "button": {
+                  "background": "rgba(184, 204 ,11, 0.8)",
+                  "text": "#ffffff"
+                }
+              },
+              "theme": "classic",
+              "content": {
+                "message": "A nagyobb felhasználói élmény érdekében sütiket (cookie-kat) használunk. A böngészés folytatásával jóváhagyod használatukat.",
+                "dismiss": "Elfogadom!",
+                "link": "Részletek",
+                "href": "cookie-details"
+              }
+            })});
+            </script> -->
+            <script>
+            window.addEventListener("load", function(){
+            window.cookieconsent.initialise({
+              "palette": {
+                "popup": {
+                  "background": "rgba(0, 0, 0, 0.8)",
+                  "text": "#ffffff"
+                },
+                "button": {
+                  "background": "rgba(184, 204 ,11, 0.8)",
+                  "text": "#ffffff"
+                }
+              },
+              "theme": "classic",
+              "content": {
+                "message": "A nagyobb felhasználói élmény érdekében sütiket (cookie-kat) használunk. A böngészés folytatásával jóváhagyod használatukat.",
+                "dismiss": "Elfogadom!",
+                "link": "Részletek",
+                "href": "pdf/suti-tajekoztato.pdf"
+              }
+            })});
+            </script>
+            <!-- cookie end -->
+            
+            <!-- Google Tag Manager -->
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-W855H2');</script>
+            <!-- End Google Tag Manager -->
+            
+            </head>
+<body id="karrier">
+    <!--NAVBAR-->
+        @include('content.navbar')
+    <!--NAVBAR END-->
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Bare - Start Bootstrap Template</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <style>
-      body {
-        padding-top: 54px;
-      }
-      @media (min-width: 992px) {
-        body {
-          padding-top: 56px;
-        }
-      }
-
-    </style>
-
-  </head>
-
-  <body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-          <a class="navbar-brand" href="#">Start Bootstrap</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href=' {{ url("/") }} '>Home
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href='#'>Startup</a>
-              </li>
-              <li class="dropdown">
-                  <a href="#" class="nav-link" data-toggle="dropdown">
-                      Szolgáltatások
-                  </a>
-                  <ul class="dropdown-menu">
-                      <li class="nav-item">
-                          <a href="#">Marketing</a>
-                      </li>
-                      <li class="nav-item">
-                          <a href="#">App Fejlesztés</a>
-                      </li>
-                      <li class="nav-item">
-                          <a href="#">Grafikai Munkák</a>
-                      </li>
-                      <li class="nav-item">
-                          <a href="#">Webfejlesztés</a>
-                      </li>
-                  </ul>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href='#'>GDPR</a>
-              </li>
-              <li class="nav-item active">
-                  <a class="nav-link" href=' {{url("/carrier") }} '>Karrier</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href=' {{ url("/blog") }} '>Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Kapcsolat</a>
-              </li>
-              @if (Route::has('login'))
-                  @auth
-                      <li class="nav-item">
-                          <a class="nav-link" href="{{ url('/home') }}">Home</a>
-                      </li>
-                  @else
-                      <li class="nav-item">
-                          <a class="nav-link" href="{{ route('login') }}">Login</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="{{ route('register') }}">Register</a>
-                      </li>
-                  @endauth
-              @endif
-              <li class="dropdown">
-                  <a href="#" class="nav-link" data-toggle="dropdown">
-                      {{ Config::get('languages')[App::getLocale()] }}
-                  </a>
-                  <ul class="dropdown-menu">
-                      @foreach (Config::get('languages') as $lang => $language)
-                          @if ($lang != App::getLocale())
-                              <li class="nav-item">
-                                  <a href="{{ route('lang.switch', $lang) }}">{{$language}}</a>
-                              </li>
-                          @endif
-                      @endforeach
-                  </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-    <!-- Page Content -->
-    <div class="container">
-        @if (session('status'))
-            <div class="alert alert-success">
-                {{ session('status') }}
+    <!-- karrier -->
+	<section id="karrier-content">
+		<div class="container">
+			<h2 class="center dijak">
+                    RÓLUNK
+			</h2>
+			<div class="row">
+				<div class="col offset-s5 s2">
+					<hr>
+					<div class="green-point-center"></div>
+				</div>
+			</div>
+			<p class="karrier-text">
+                    Tapasztalt, lendületes startup építő csapat vagyunk. Olyan új termékeket és cégeket építünk, melyek pozitív változást hoznak. Olyan csapattagokat keresünk, akik vonzódnak a technológiai újításokhoz, és egy fiatalos közegben, nagy önállóság mellett szeretnének részt venni az építkezésben. Nálunk csak mélyvíz van, abban viszont együtt úszunk.
+			</p>
+			<div class="row center">
+				<div class="col s12 m6 l3"><img class="responsive-img" src="/assets/img/karrier1.jpg" alt="Drukka csapat">
+				</div>
+				<div class="col s12 m6 l3"><img class="responsive-img" src="/assets/img/karrier2.jpg" alt="Drukka csapat">
+				</div>
+				<div class="col s12 m6 l3"><img class="responsive-img" src="/assets/img/karrier3.jpg" alt="Drukka csapat">
+				</div>
+				<div class="col s12 m6 l3"><img class="responsive-img" src="/assets/img/karrier4.jpg" alt="Drukka csapat">
+				</div>
+			</div>
+			<div class="row">
+                @if(count($joblist) > 0)
+                    @foreach($joblist->all() as $job)
+                        <div class="col offset-m1 m10 s12 offset-l3 l6">
+                            <div class="card horizontal">
+                                <div class="card-image">
+                                    <img class="responsive-img" src="/assets/img/karrier-icon.png" alt="drukka karrier">
+                                </div>
+                                <div class="card-stacked">
+                                    <div class="card-content">
+                                        <h2 class="header">
+                                            {{ $job->job_title }}
+                                        </h2>
+                                            {!! $job->job_description !!}
+                                    </div>
+                                    <div class="card-action">
+                                        <a class="waves-effect waves-light btn zoldbtn" href=' {{ url("/carrier/{$job->id}") }} ' target="_blank">
+                                            BŐVEBBEN
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                @endif
             </div>
-        @endif
+            <div class="row center">{{ $joblist->links() }}</div>
+		</div>
+	</section>
+	<!-- karrier end-->
 
-        @if(count($errors) > 0)
-            @foreach($errors->all() as $error)
-                <div class="alert alert-danger"> {{ $error }} </div>
-            @endforeach
-        @endif
+    <!--NEWSLETTER-->
+        @include('content.newsletter')
+    <!--NEWSLETTER END-->
+    <!--FOOTER-->
+        @include('content.footer')
+    <!--FOOTER END-->
+    
+    <!-- import jQuery before materialize.js-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-        @if(session('response'))
-            <div class="alert alert-success">
-                {{ session('response') }}
-            </div>
-         @endif
-        @if(count($joblist) > 0)
-            @foreach($joblist->all() as $job)
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                    <h1 class="mt-5">{{ $job->job_title }}</h1>
-                    <p class="lead">{!! $job->job_description !!}</p>
-                    <ul class="list-unstyled">
-                        <li><a href=' {{ url("/carrier/{$job->id}") }} '>Bővebben</a></li>
-                    </ul>
-                    </div>
-                </div>
-            @endforeach
-        @endif
-        {{ $joblist->links() }}
-        @include('content.contact')
-    </div>
+	<!-- owl carousel -->
+	<script src="/js/owl.carousel.min.js"></script>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+	<!-- import materialize.js-->
+	<script type="text/javascript" src="/js/materialize.min.js"></script>
 
-  </body>
-
+	<!-- custom js -->
+	<script type="text/javascript" src="/js/custom.js"></script>
+	<script type="text/javascript" src="/js/contact-validation.js"></script>
+</body>
 </html>

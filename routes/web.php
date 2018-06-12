@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/index', function() {
+    return view('index');
+});
+
+Route::get('/startup', function() {
+    return view('startup');
+});
+
 //Főoldal linkek
     Route::post('/contact', 'IndexController@store');
 

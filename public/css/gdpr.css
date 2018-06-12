@@ -1,0 +1,350 @@
+/* fonts */
+/*@font-face {
+	font-family: neris-semi-bold;
+	src: url(/../../fonts/Neris-SemiBold.otf);
+}*/
+/*@font-face {
+	font-family: neris-light;
+	src: url(/../../fonts/Neris-Light.otf);
+}*/
+/* fonts end */
+#gdpr #nav {
+  background: url(../assets/img/gdpr-bg.jpg) no-repeat top center !important;
+  background-size: cover !important; }
+
+#services-dropdown a::after {
+  display: none; }
+
+.question-mark-img {
+  margin-right: 30px; }
+
+.gdpr-ul li {
+  margin-bottom: 10px; }
+
+.gdpr-text {
+  font-family: Montserrat-Light;
+  font-size: 16px;
+  color: #4d4d4f;
+  text-align: left; }
+
+.gdpr-margin-bottom-zero {
+  margin-bottom: 0 !important; }
+
+.li-text {
+  display: inline-block;
+  vertical-align: text-top;
+  width: 95%; }
+
+.audit-packages-img-width {
+  width: 80px; }
+
+.audit-packages {
+  display: flex;
+  /*justify-content: space-evenly;*/
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 50px; }
+  .audit-packages .audit-packages-div {
+    border: 1px solid #d0d3d9;
+    width: 270px;
+    height: 335px;
+    text-align: center;
+    padding: 0 15px 15px;
+    margin-bottom: 50px;
+    box-shadow: 0.375px 0.927px 10px 0px rgba(74, 74, 74, 0.21); }
+  .audit-packages .fa-check, .audit-packages .fa-plus {
+    color: #acbd13; }
+  .audit-packages .audit-packages-type {
+    color: #acbd13;
+    background: #39393b;
+    position: relative;
+    height: 46px;
+    top: -23px;
+    line-height: 46px;
+    border-radius: 23px;
+    width: 70%;
+    margin: auto; }
+  .audit-packages .audit-packages-light {
+    font-size: 12px;
+    font-family: Montserrat-Light;
+    color: #807c7c;
+    height: 36px;
+    position: relative;
+    /*top: -23px;*/
+    margin-bottom: 0;
+    margin-top: 0; }
+  .audit-packages ul {
+    height: 167px; }
+    .audit-packages ul li {
+      text-align: left;
+      margin-bottom: 10px;
+      font-size: 13px; }
+  .audit-packages .audit-packages-text-green {
+    color: #acbd13;
+    text-transform: uppercase; }
+  .audit-packages .audit-packages-text {
+    display: inline-block;
+    /*margin-left: 20px;*/
+    padding-left: 10px;
+    width: 93%;
+    vertical-align: text-top; }
+  .audit-packages .audit-packages-fa {
+    display: inline-block; }
+
+.gdpr-margin-bottom-50 {
+  margin-bottom: 50px; }
+
+#calculator .dropdown-content li > a, #calculator .dropdown-content li > span {
+  font-size: 16px;
+  color: #acbd13;
+  display: block;
+  line-height: 22px;
+  padding: 14px 16px; }
+
+#contact-form #sending-submit-2 {
+  margin-top: 30px; }
+
+.select-dropdown {
+  color: #acbd13; }
+
+#calculator .select-wrapper input.select-dropdown {
+  font-size: 11px; }
+
+#calculator .btn:hover, #calculator .btn-large:hover {
+  background-color: #acbd13; }
+
+.calculator-checkbox {
+  margin-bottom: 65px; }
+
+.adatvedelmi-nyilatkozat-aszf-checkbox a {
+  color: #acbd13 !important; }
+
+.select-dropdown.dropdown-content li:hover {
+  background-color: #acbd13; }
+
+label.incident {
+  top: -65px;
+  font-size: 11px; }
+
+#calculator input:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #acbd13;
+  -webkit-box-shadow: 0 1px 0 0 #acbd13;
+  box-shadow: 0 1px 0 0 #acbd13; }
+
+#calculator input:not(.browser-default):focus:not([readonly]) + label {
+  color: #9e9e9e !important; }
+
+[type="checkbox"]:checked + label:before {
+  border-right: 2px solid #acbd13;
+  border-bottom: 2px solid #acbd13; }
+
+.select-dropdown.dropdown-content li:hover span {
+  color: #fff !important; }
+
+.gdpr-margin-top-20 {
+  margin-top: 20px; }
+
+.calculator-div {
+  border: 1px solid #d0d3d9;
+  background-color: #f8f8f8;
+  box-shadow: 0.375px 0.927px 10px 0px rgba(74, 74, 74, 0.21);
+  width: auto;
+  margin: auto; }
+  .calculator-div .calculator-title {
+    color: #acbd13;
+    font-size: 18px;
+    font-family: Montserrat-Bold;
+    text-align: center; }
+  .calculator-div .calculator-price {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Bold;
+    text-align: center; }
+  .calculator-div .calculator-result-div-inner {
+    background: #4d4d4f;
+    padding: 15px;
+    border-bottom: 1px solid #87898c;
+    margin: 0; }
+  .calculator-div .calculator-result-div p {
+    margin: 0 !important;
+    letter-spacing: 3px; }
+
+#gdpr-sending-icon {
+  position: relative;
+  top: -35px; }
+
+#gdpr-sending-form {
+  border: 1px solid #d0d3d9;
+  padding: 15px 15px; }
+
+#sending-submit {
+  margin-top: 15px !important; }
+
+#footer-gdpr, #m-footer-gdpr {
+  background: url(../assets/img/gdpr-footer-bg.jpg) no-repeat;
+  height: auto;
+  background-size: cover; }
+
+#footer .grey-text {
+  text-transform: uppercase; }
+
+.gdpr-error {
+  color: #ec3131; }
+
+#modal-gdpr {
+  width: 100%; }
+
+.intellitext-logo {
+  margin-left: 15px; }
+
+#success {
+  color: red; }
+
+#success-with-data {
+  color: red; }
+
+.contact-link {
+  color: #666 !important; }
+
+.contact-link:hover {
+  color: #666 !important;
+  text-decoration: underline; }
+
+@media (max-width: 575px) {
+  #calculator h2 {
+    font-size: 20px !important; }
+  #calculator .input-field label {
+    width: 100%; }
+
+  #calculator .zoldbtn {
+    font-size: 12px;
+    padding: 11px 15px; }
+
+  #gdpr-sending-form {
+    border: 1px solid #d0d3d9;
+    padding: 15px 15px; } }
+@media (max-width: 767px) {
+  .gdpr-order {
+    font-size: 16px;
+    letter-spacing: 2px; } }
+.fa-home {
+  vertical-align: baseline !important; }
+
+.services-bg {
+  background: #f6f7f9; }
+
+#services-dropdown.dropdown-content {
+  background: rgba(0, 0, 0, 0.8) !important;
+  width: 260px !important;
+  margin-top: 64px !important; }
+
+#services-dropdown a {
+  padding: 15px !important;
+  text-align: left; }
+
+#services-dropdown a:hover {
+  background: #acbd13 !important; }
+
+#services-header {
+  background: url(../assets/img/services-bg.jpg) no-repeat top center;
+  background-size: cover;
+  height: 467px; }
+
+.right-align {
+  text-align: right !important; }
+
+.services-header h1 {
+  font-family: Montserrat-SemiBold !important;
+  font-size: 55px !important;
+  color: #fff !important;
+  text-align: center;
+  text-shadow: 0px 5px 5px rgba(51, 51, 52, 0.57);
+  margin-top: 0;
+  padding-top: 240px; }
+.services-header .header-text {
+  padding-top: 200px; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+#gdpr-infografika img {
+  max-width: 400px; }
+#gdpr-infografika p {
+  font-family: Montserrat-Light; }
+#gdpr-infografika h2 {
+  font-family: Montserrat-ExtraBold;
+  font-size: 57px;
+  /*color: #f6f6f6;*/
+  color: #f3f3f3;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-left: 15px; }
+  #gdpr-infografika h2 span {
+    font-family: Montserrat-Bold;
+    font-size: 18px;
+    color: #4d4d4f;
+    text-transform: uppercase;
+    display: block;
+    margin-top: -42px;
+    margin-left: 5px; }
+#gdpr-infografika .services-background-green {
+  background: #acbd13;
+  padding: 15px;
+  /*height: 600px;*/ }
+  #gdpr-infografika .services-background-green p {
+    color: #fff; }
+  #gdpr-infografika .services-background-green h2 {
+    color: rgba(255, 255, 255, 0.2); }
+    #gdpr-infografika .services-background-green h2 span {
+      color: #fff;
+      margin-left: -30px; }
+  #gdpr-infografika .services-background-green .green-point {
+    background-color: #fff;
+    margin-right: 10px;
+    margin-left: 10px;
+    vertical-align: middle; }
+
+@media screen and (min-width: 1200px) and (max-width: 1599px) {
+  #gdpr-infografika h2 {
+    font-family: Montserrat-ExtraBold;
+    font-size: 40px; }
+    #gdpr-infografika h2 span {
+      margin-top: -23px; } }
+@media (max-width: 575px) {
+  .services-header h1 {
+    font-size: 36px !important;
+    margin-top: 0;
+    padding-top: 240px; }
+
+  #gdpr-infografika h2 span {
+    font-size: 16px;
+    margin-top: -23px;
+    margin-left: 5px; }
+
+  #gdpr-infografika h2 {
+    font-size: 36px;
+    margin-left: 15px; }
+
+  #services-header {
+    height: 320px; }
+
+  .services-header h1 {
+    padding-top: 175px; }
+
+  #gdpr-infografika img {
+    max-width: 75%; } }
+@media (max-width: 1199px) {
+  #gdpr-infografika img {
+    max-width: 50%; }
+
+  .hide-under-1200 {
+    display: none; } }
+@media (min-width: 1200px) {
+  .hide-over-1200 {
+    display: none; } }
+@media (max-width: 479px) {
+  #gdpr-infografika h2 span {
+    font-size: 12px; } }
+@media (max-width: 359px) {
+  #gdpr-infografika h2 span {
+    font-size: 10px; } }

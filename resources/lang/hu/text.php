@@ -3,6 +3,18 @@
         //Language Selector
         'welcome' => 'ez lesz a drukka kinti oldal',
         //FrontEnd
+            //Navbar
+            "home" => "FŐOLDAL",
+            "startup" => "STARTUP",
+            "services" => "SZOLGÁLTATÁSOK",
+            "marketing" => "MARKETING",
+            "app" => "APP FEJLESZTÉS",
+            "graphics" => "GRAFIKAI MUNKÁK",
+            "webdevelop" => "WEBFEJLESZTÉS",
+            "carrier" => "KARRIER",
+            "blog" => "BLOG",
+            "contact" => "KAPCSOLAT",
+            "aszf" => "ÁSZF",
             //Home
             //Startup
             //Szolgáltatások

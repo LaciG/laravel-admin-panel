@@ -3,6 +3,18 @@
         //Language Selector
         'welcome' => 'This will be the main site',
         //FrontEnd
+            //Navbar
+            "home" => "HOME",
+            "startup" => "STARTUP",
+            "services" => "SERVICES",
+            "marketing" => "MARKETING",
+            "app" => "APP DEVELOPMENT",
+            "graphics" => "GRAPHICS",
+            "webdevelop" => "WEBDEVELOP",
+            "carrier" => "CAREER",
+            "blog" => "BLOG",
+            "contact" => "CONTACT",
+            "aszf" => "TERMS OF USE",
             //Home
             //Startup
             //Szolgáltatások
