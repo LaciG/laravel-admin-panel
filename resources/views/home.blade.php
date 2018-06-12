@@ -37,11 +37,13 @@
                         @if(count($bloglist) > 0)
                             @foreach($bloglist->all() as $blog)
                                 <tr>
-                                    <td> {{ $blog->blog_title }} </td><td> {{ $blog->blog_category }} </td>
+                                    <td> {{ $blog->blog_title }} </td><td> {{ $blog->category_name }} </td>
                                 </tr>
                             @endforeach
                         @else
-                        semmi
+                        <tr>
+                            <td align="center" colspan="2">Nincs blogbejegyzés!</td>
+                        </tr>
                         @endif
                     <table>
 
@@ -59,7 +61,9 @@
                                 </tr>
                             @endforeach
                         @else
-                        semmi
+                        <tr>
+                            <td align="center" colspan="2">Nincs aktív álláshirdetés!</td>
+                        </tr>
                         @endif
                     <table>
                 </div>

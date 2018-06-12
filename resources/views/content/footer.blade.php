@@ -90,57 +90,54 @@
                 <div class="row">
                     <div class="col s12 m6 l3">
                         <h5 class="footer-heading">drukka kft.</h5> <address>        1138 Budapest,<br>        Váci út 168/A<br>        <a href="tel:+3612692718">Tel.: +36 1 269 2718</a><br>                Fax: +36 1 269 2722<br>        <a href="mailto:info@drukka.hu">Mail: info@drukka.hu</a>        </address>
-                        <!--<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>-->
                     </div>
                     <div class="col s12 m6 l3">
                         <h5 class="footer-heading">Drukka America Inc.</h5> <address>        1001 N. Federal Hwy, Suite 350,<br>        Hallandale, FL-33009<br>        <a href="tel:+19544163366">Tel.: +1 954 416 3366</a><br>        <a href="mailto:info@drukka.com">Mail: info@drukka.com</a><br>        </address>
-                        <!--<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>-->
                     </div>
                     <div class="col s12 m6 l4">
                         <h5 class="footer-heading">InnoWEB Solutions S.R.L.</h5> <address>        540331 Targu Mures,<br>Str. Mihail Eminescu<br>Nr.55, jud. Mures, Romania<br>        <a href="tel:+4036542443">Tel.: (+4) 0365-424-43</a><br>        <a href="mailto:info@innoweb.ro">Mail: info@innoweb.ro</a><br>        </address>
-                        <!--<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>-->
                     </div>
                     <div class="col s12 m6 l2">
                         <h5 class="footer-heading">Linkek</h5>
                         <ul>
                             <li class="hide">
-                                <a class="grey-text text-lighten-3" href="/">
+                                <a class="grey-text text-lighten-3" href="">
                                     Főoldal </a>
                             </li>
                             <li>
-                                <a class="grey-text text-lighten-3 hide" href="/startup">
+                                <a class="grey-text text-lighten-3 hide" href="">
                                     Startup </a>
                             </li>
                             <li>
-                                <a class="grey-text text-lighten-3 hide" href="/karrier">
+                                <a class="grey-text text-lighten-3 hide" href="">
                                     Karrier </a>
                             </li>
                             <li>
-                                <a class="grey-text text-lighten-3 hide" href="/blog">
+                                <a class="grey-text text-lighten-3 hide" href="">
                                     Blog </a>
                             </li>
                             <li>
-                                <a class="grey-text text-lighten-3" href="/szolgaltatas-marketing">
+                                <a class="grey-text text-lighten-3" href="">
                                     MArketing
                                 </a>
                             </li>
                             <li>
-                                <a class="grey-text text-lighten-3" href="/szolgaltatas-app">
+                                <a class="grey-text text-lighten-3" href="">
                                     Appfejlesztés
                                 </a>
                             </li>
                             <li>
-                                <a class="grey-text text-lighten-3" href="/szolgaltatas-grafika">
+                                <a class="grey-text text-lighten-3" href="">
                                     Grafika
                                 </a>
                             </li>
                             <li>
-                                <a class="grey-text text-lighten-3" href="/szolgaltatas-webfejlesztes">
+                                <a class="grey-text text-lighten-3" href="">
                                     Webfejlesztés
                                 </a>
                             </li>
                             <li>
-                                <a class="grey-text text-lighten-3" href="/gdpr">
+                                <a class="grey-text text-lighten-3" href="">
                                 GDPR
                                 </a>
                             
@@ -150,7 +147,7 @@
                                     Kapcsolat
                             </li>
                             <li class="hide">
-                                <a class="grey-text text-lighten-3" href="/aszf.php">
+                                <a class="grey-text text-lighten-3" href="">
                                     ÁSZF </a>
                             </li>
                         </ul>
@@ -210,57 +207,54 @@
             <div class="row">
                 <div class="col s12 m6 l3">
                     <h5 class="footer-heading">drukka kft.</h5> <address>        1138 Budapest,<br>        Váci út 168/A<br>        <a href="tel:+3612692718">Tel.: +36 1 269 2718</a><br>        Fax: +36 1 269 2722<br>         <a href="mailto:info@drukka.hu">Mail: info@drukka.hu</a>        </address>
-                    <!--<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>-->
                 </div>
                 <div class="col s12 m6 l3">
                     <h5 class="footer-heading">Drukka America Inc.</h5> <address>        1001 N. Federal Hwy, Suite 350,<br>        Hallandale, FL-33009<br>        <a href="tel:+19544163366">Tel.: +1 954 416 3366</a><br>        <a href="mailto:info@drukka.hu">Mail: info@drukka.hu</a>        </address>
-                    <!--<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>-->
                 </div>
                 <div class="col s12 m7 l4">
                     <h5 class="footer-heading">InnoWEB Solutions KFT.</h5> <address>        540331 Marosvásárhely,<br>        Mihai Eminescu u. 48 sz.,<br>        <a href="tel:+4036542443">Tel.: (+4) 0365-424-43</a><br>        <a href="mailto:info@innoweb.ro">Mail: info@innoweb.ro</a>         </address>
-                    <!--<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>-->
                 </div>
                 <div class="col s12 offset-m1 m4 l2 hide">
                     <h5 class="footer-heading">Linkek</h5>
                     <ul>
                         <!--<li>
-                            <a class="grey-text text-lighten-3" href="/">
+                            <a class="grey-text text-lighten-3" href="">
                                 Főoldal </a>
                         </li>-->
                         <li>
-                            <a class="grey-text text-lighten-3" href="/startup">
+                            <a class="grey-text text-lighten-3" href="">
                                 Startup </a>
                         </li>
                         <li>
-                            <a class="grey-text text-lighten-3" href="/karrier">
+                            <a class="grey-text text-lighten-3" href="">
                                 Karrier </a>
                         </li>
                         <li>
-                            <a class="grey-text text-lighten-3" href="/blog">
+                            <a class="grey-text text-lighten-3" href="">
                                 Blog </a>
                         </li>
                         <li class="hide">
-                            <a class="grey-text text-lighten-3" href="/szolgaltatas-marketing">
+                            <a class="grey-text text-lighten-3" href="">
                                 Marketing
                             </a>
                         </li>
                         <li class="hide">
-                            <a class="grey-text text-lighten-3" href="/szolgaltatas-app">
+                            <a class="grey-text text-lighten-3" href="">
                                 Appfejlesztés
                             </a>
                         </li>
                         <li class="hide">
-                            <a class="grey-text text-lighten-3" href="/szolgaltatas-grafika">
+                            <a class="grey-text text-lighten-3" href="">
                                 Grafika
                             </a>
                         </li>
                         <li class="hide">
-                            <a class="grey-text text-lighten-3" href="/szolgaltatas-webfejlesztes">
+                            <a class="grey-text text-lighten-3" href="">
                                 Webfejlesztés
                             </a>
                         </li>
                         <li>
-                            <a class="grey-text text-lighten-3" href="/gdpr">
+                            <a class="grey-text text-lighten-3" href="">
                                 GDPR
                             </a>
                         
@@ -270,7 +264,7 @@
                                 Kapcsolat</a>
                         </li>-->
                         <!--<li>
-                            <a class="grey-text text-lighten-3" href="/aszf.php">
+                            <a class="grey-text text-lighten-3" href="">
                                 ÁSZF</a>
                         </li>-->
                     </ul>

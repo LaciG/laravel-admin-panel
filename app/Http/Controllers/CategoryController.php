@@ -23,10 +23,14 @@ class CategoryController extends Controller
 
     public function store(Request $request) {
         $this->validate($request, [
-            'categoryId' => 'required'
+            'categoryId' => 'required',
+            'class' => 'min:3|required',
+            'image' => 'required',
         ]);
         $category = new Category;
-        $category->category_name = $request->input('categoryId');
+        $category->name = $request->input('categoryId');
+        $category->class = $request->input('class');
+        $category->image = $request->input('image');
         $category->save();
         return redirect('/category')->with('response', 'Kategória hozzáadva');
     }

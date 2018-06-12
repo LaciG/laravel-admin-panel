@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-        <head>
+<html lang="{{ app()->getLocale() }}">
+    <head>
 
-                <!-- Import Google Icon Font -->
+            <!-- Import Google Icon Font -->
                 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
             
                 <!-- Import materialize.css -->
@@ -29,13 +29,13 @@
                 <!-- Let browser know website is optimized for mobile -->
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <meta charset="utf-8">
-                <meta name="Description" content="">
-                <meta name="Keywords" content="">
-                <meta name="robots" content="">
+                <meta name="Description" content="App fejlesztés">
+                <meta name="Keywords" content="gdpr">
+                <meta name="robots" content="noindex, nofollow">
                 <meta name="revisit-after" content="1 days">
                 <meta name="author" content="Drukka Startup Studio">
                 <meta property="og:image" content="https://drukka.hu/assets/img/drukka_thumbnail.jpg">
-                <title>Blog</title>
+                <title>Drukka.hu App fejlesztés</title>
             
             <!-- cookie -->
             <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
@@ -72,72 +72,74 @@
             })(window,document,'script','dataLayer','GTM-W855H2');</script>
             <!-- End Google Tag Manager -->
             
-            </head>
-<body id="blog-article-body">
+    </head>
+<body id="services-app" class="services-bg">
     <!--NAVBAR-->
         @include('content.navbar')
     <!--NAVBAR END-->
+
+    <!-- header services -->
+	<div id="services-header" class="services-header">
+		<div id="services-text" class="services-header-text">
+			<div class="col s12">
+				<h1>
+                    APP FEJLESZTÉS
+				</h1>
+			</div>
+		</div>
+	</div>
+	<!-- header-services end -->
     
-    <!-- blog-article -->
-	<section id="blog-article">
+    <!-- services app -->
+	<section id="gdpr-infografika">
 		<div class="container">
-                @if(count($blogpost) > 0)
-                @foreach($blogpost->all() as $blog)
+
 			<div class="row">
-				<div id="article" class="col l8 offset-l2">
-					<h1 class="card-cim">
-						{!! $blog->blog_title !!}
-					</h1>
-					<p class="card-datum">
-						{{ date('M j, Y H:i', strtotime($blog->created_at)) }}
-					</p>
-					<p class="card-kategoria">
-						{!! $blog->category_name !!}
-					</p>
-					<p><img class="responsive-img" src="{!! $blog->blog_cover_image !!}" alt="{!! $blog->blog_cover_image_alt !!}">
-					</p>
-					<p class="gray">
-						{!! $blog->blog_start_post !!}
-					</p>
-					<p class="gray">
-						{!! $blog->blog_rest_post !!}
-					</p>
-					<div class="row">
-						<div class="col l2 offset-l5">
-							<hr>
-                        </div>
-                    </div>
-                    <div class="row center">
-                        <a class="waves-effect waves-light btn zoldbtn" href=' {{ url("/blog") }} '>
-                            VISSZA
-                        </a>
-                    </div>
-				<div>		
-            </div>
-            @endforeach
-            @endif
+				<div class="col s12 xl6 center"><img class="responsive-img" src="assets/svg/services/services-app-application.svg" alt="app fejlesztés ikon">
+				</div>
+				<div class="col s12 xl6">
+					<div class="">
+						<h2>DEVELOPMENT<span><div class="green-point"></div>APP FEJLESZTÉS</span></h2>
+						<p><b>Az elmúlt pár évben gyökeresen megváltoztak a tartalomfogyasztási szokások.</b></p>
+						<p>A mobil átvette az uralmat és az elsőszámú képernyővé lépett elő az életünkbe. Egy mobil applikáció óriási segítség, és hatékony eszköz a vevőidért és felhasználóidért folytatott harcban. Bátran számíthatsz ránk iOS és Android mobil applikációk teljes körű fejlesztésében, a tervezéstől az üzemeltetésig. Két kedvenc platformunk, amire örömmel fejlesztünk. Külön megtervezve az Android és iOS verziót is.</p>
+						<p>Mindkettőben rengeteg lehetőséget látunk és ezeket ki is aknázzuk.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col s12">
+					<div class="services-background-green">
+						<h2 style="display: none">application<span><div class="green-point"></div>GARANCIA</span></h2>
+						<p>Ezután folyamatos kapcsolattartással haladunk egészen a megvalósításig. Minden álltatunk fejlesztett applikációra 1 év garanciát adunk, ami a hibajavításokra és a rendszerszintű követelmények változásaira is kiterjed.</p>
+						<p><b>Biztos sok helyen láttad már, hogy garancia, de mit is jelent ez pontosan?</b></p>
+						<p><b>Minden applikációnkat nagyon körültekintően tervezzük meg, teszteljük, finomítjuk. Mint minden területen, itt is lehetnek változások az eszközökön, amiért valamelyik funkció módosításra szorul, vagy egyszerűen csak egy apróbb hiba kerülte el a figyelmünket. Az ilyen esetekre való tekintettel vállaljuk minden általunk fejlesztett applikáció esetében az 1 éves garanciát, hogy hosszú távon is maximális elégedettséget biztosíthassunk.</b></p>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</section>
-	<!-- blog-article end -->
-
-    <!--NEWSLETTER-->
-        @include('content.newsletter')
-    <!--NEWSLETTER END-->
+	<!-- services app end-->
 
     <!--FOOTER-->
         @include('content.footer')
     <!--FOOTER END-->
-        <!-- import jQuery before materialize.js-->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    
-        <!-- owl carousel -->
-        <script src="/js/owl.carousel.min.js"></script>
-    
-        <!-- import materialize.js-->
-        <script type="text/javascript" src="/js/materialize.min.js"></script>
-    
-        <!-- custom js -->
-        <script type="text/javascript" src="/js/custom.js"></script>
-        <script type="text/javascript" src="/js/contact-validation.js"></script>
+
+    <!-- import jQuery before materialize.js-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<!-- owl carousel -->
+	<script src="/js/owl.carousel.min.js"></script>
+
+	<!-- import materialize.js-->
+	<script type="text/javascript" src="/js/materialize.min.js"></script>
+
+	<!-- custom js -->
+	<script type="text/javascript" src="/js/custom.js"></script>
+	<script type="text/javascript" src="/js/services-validation.js"></script>
+	<!-- gallery js -->
+	{{--  <script src="/js/gallery.js"></script>  --}}
+	<!-- gallery js end -->
 </body>
 </html>

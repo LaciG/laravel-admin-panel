@@ -13,32 +13,48 @@
 
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang']);
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/index', function() {
-    return view('index');
-});
-
-Route::get('/startup', function() {
-    return view('startup');
-});
-
 //Főoldal linkek
+    Route::get('/', function() {
+        return view('index');
+    });
+
+    Route::get('/startup', function() {
+        return view('startup');
+    });
+
+    Route::get('/marketing', function() {
+        return view('services.marketing');
+    });
+
+    Route::get('/app', function() {
+        return view('services.app');
+    });
+
+    Route::get('/graphics', function() {
+        return view('services.graphics');
+    });
+
+    Route::get('/webdevelop', function() {
+        return view('services.webdevelop');
+    });
+
+    Route::get('/gdpr', function() {
+        return view('gdpr');
+    });
+
     Route::post('/contact', 'IndexController@store');
+    //Karrier Linkek
+        Route::get('/carrier', 'CarrierController@index');
 
-//Blog linkek
-    Route::get('/blog', 'BlogController@index');
+        Route::get('/carrier/{id}', 'CarrierController@show');
 
-    Route::get('/blog/{id}', 'BlogController@show');
+        Route::post('/carrier', 'CarrierController@store');
 
-//Karrier Linkek
-    Route::get('/carrier', 'CarrierController@index');
+    //Blog linkek
+        Route::get('/blog', 'BlogController@index');
 
-    Route::get('/carrier/{id}', 'CarrierController@show');
+        Route::get('/blog/{id}', 'BlogController@show');
 
-    Route::post('/carrier', 'CarrierController@store');
 
 Auth::routes();
 //Főoldal

@@ -150,6 +150,8 @@
                             </div>
                         </div>
                     @endforeach
+                @else
+                <p class="center">Jelenleg nincs aktív álláshirdetés</p>
                 @endif
             </div>
             <div class="row center">{{ $joblist->links() }}</div>

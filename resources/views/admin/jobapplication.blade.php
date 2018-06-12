@@ -39,7 +39,7 @@
                             @endforeach
                         @else
                             <tr>
-                                <td colspan="6">Nincsenek jelentkezések</td>
+                                <td align="center" colspan="6">Nincsenek jelentkezések!</td>
                             </tr>
                         @endif
                     </table>

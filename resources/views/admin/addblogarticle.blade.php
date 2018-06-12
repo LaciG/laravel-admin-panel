@@ -41,7 +41,7 @@
                                         <option value="" selected>Válassz</option>
                                         @if(count($categories) > 0)
                                             @foreach($categories->all() as $category)
-                                                <option value="{{$category->category_name}}"> {{ $category->category_name }} </option>
+                                                <option value="{{$category->id}}"> {{ $category->name }} </option>
                                             @endforeach
                                         @endif
                                     </select>

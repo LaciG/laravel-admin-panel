@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-        <head>
+<html lang="{{ app()->getLocale() }}">
+    <head>
 
-                <!-- Import Google Icon Font -->
+            <!-- Import Google Icon Font -->
                 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
             
                 <!-- Import materialize.css -->
@@ -29,13 +29,13 @@
                 <!-- Let browser know website is optimized for mobile -->
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <meta charset="utf-8">
-                <meta name="Description" content="">
-                <meta name="Keywords" content="">
-                <meta name="robots" content="">
+                <meta name="Description" content="Webfejlesztés">
+                <meta name="Keywords" content="Webfejlesztés">
+                <meta name="robots" content="noindex, nofollow">
                 <meta name="revisit-after" content="1 days">
                 <meta name="author" content="Drukka Startup Studio">
                 <meta property="og:image" content="https://drukka.hu/assets/img/drukka_thumbnail.jpg">
-                <title>Blog</title>
+                <title>Drukka.hu webfejlesztés</title>
             
             <!-- cookie -->
             <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
@@ -72,72 +72,45 @@
             })(window,document,'script','dataLayer','GTM-W855H2');</script>
             <!-- End Google Tag Manager -->
             
-            </head>
-<body id="blog-article-body">
+    </head>
+<body id="services-webdevelop" class="services-bg">
     <!--NAVBAR-->
         @include('content.navbar')
     <!--NAVBAR END-->
-    
-    <!-- blog-article -->
-	<section id="blog-article">
-		<div class="container">
-                @if(count($blogpost) > 0)
-                @foreach($blogpost->all() as $blog)
-			<div class="row">
-				<div id="article" class="col l8 offset-l2">
-					<h1 class="card-cim">
-						{!! $blog->blog_title !!}
-					</h1>
-					<p class="card-datum">
-						{{ date('M j, Y H:i', strtotime($blog->created_at)) }}
-					</p>
-					<p class="card-kategoria">
-						{!! $blog->category_name !!}
-					</p>
-					<p><img class="responsive-img" src="{!! $blog->blog_cover_image !!}" alt="{!! $blog->blog_cover_image_alt !!}">
-					</p>
-					<p class="gray">
-						{!! $blog->blog_start_post !!}
-					</p>
-					<p class="gray">
-						{!! $blog->blog_rest_post !!}
-					</p>
-					<div class="row">
-						<div class="col l2 offset-l5">
-							<hr>
-                        </div>
-                    </div>
-                    <div class="row center">
-                        <a class="waves-effect waves-light btn zoldbtn" href=' {{ url("/blog") }} '>
-                            VISSZA
-                        </a>
-                    </div>
-				<div>		
-            </div>
-            @endforeach
-            @endif
-		</div>
-	</section>
-	<!-- blog-article end -->
 
-    <!--NEWSLETTER-->
-        @include('content.newsletter')
-    <!--NEWSLETTER END-->
+    <!-- header services -->
+	<div id="services-header" class="services-header">
+		<div id="services-text" class="services-header-text">
+			<div class="col s12">
+				<h1>
+                    WEBFEJLESZTÉS
+				</h1>
+				<p>
+			</div>
+		</div>
+	</div>
+	<!-- header-services end -->
+    
+    
 
     <!--FOOTER-->
         @include('content.footer')
     <!--FOOTER END-->
-        <!-- import jQuery before materialize.js-->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    
-        <!-- owl carousel -->
-        <script src="/js/owl.carousel.min.js"></script>
-    
-        <!-- import materialize.js-->
-        <script type="text/javascript" src="/js/materialize.min.js"></script>
-    
-        <!-- custom js -->
-        <script type="text/javascript" src="/js/custom.js"></script>
-        <script type="text/javascript" src="/js/contact-validation.js"></script>
+
+    <!-- import jQuery before materialize.js-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<!-- owl carousel -->
+	<script src="/js/owl.carousel.min.js"></script>
+
+	<!-- import materialize.js-->
+	<script type="text/javascript" src="/js/materialize.min.js"></script>
+
+	<!-- custom js -->
+	<script type="text/javascript" src="/js/custom.js"></script>
+	<script type="text/javascript" src="/js/services-validation.js"></script>
+	<!-- gallery js -->
+	{{--  <script src="/js/gallery.js"></script>  --}}
+	<!-- gallery js end -->
 </body>
 </html>

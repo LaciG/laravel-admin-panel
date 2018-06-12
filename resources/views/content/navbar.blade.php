@@ -14,10 +14,10 @@
 </ul>
     <!-- services Dropdown Structure -->
       <ul id='services-dropdown' class='dropdown-content'>
-        <li><a href="">{!! __('text.marketing') !!}</a></li>
-        <li><a href="">{!! __('text.app') !!}</a></li>
-        <li><a href="">{!! __('text.graphics') !!}</a></li>
-        <li><a href="">{!! __('text.webdevelop') !!}</a></li>
+        <li><a href=' {{ url("/marketing") }} '>{!! __('text.marketing') !!}</a></li>
+        <li><a href=' {{ url("/app") }} '>{!! __('text.app') !!}</a></li>
+        <li><a href=' {{ url("/graphics") }} '>{!! __('text.graphics') !!}</a></li>
+        <li><a href=' {{ url("/webdevelop") }} '>{!! __('text.webdevelop') !!}</a></li>
       </ul>  
     <div class="navbar-fixed">
         <nav>
@@ -27,12 +27,12 @@
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav" class="right hide-on-med-and-down">
                     <li>
-                        <a href="">
+                        <a href=' {{ url("/") }} '>
                             <i class="fa fa-home fa-lg"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href=' {{ url("/startup") }} '>
                             {!! __('text.startup') !!}
                         </a>
                     </li>
@@ -42,17 +42,17 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href=' {{ url("/gdpr") }} '>
                             GDPR
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href=' {{ url("/carrier") }} '>
                             {!! __('text.carrier') !!}
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href=' {{ url("/blog") }} '>
                             {!! __('text.blog') !!}
                         </a>
                     </li>
@@ -67,13 +67,12 @@
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li>
-                        <a href="/">
-                            <!--<i class="fa fa-home fa-lg"></i>-->
+                        <a href=' {{ url("/") }} '>
                             {!! __('text.home') !!}
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href=' {{ url("/startup") }} '>
                             {!! __('text.startup') !!}
                         </a>
                     </li>
@@ -87,12 +86,12 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href=' {{ url("/carrier") }} '>
                             {!! __('text.carrier') !!}
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href=' {{ url("/blog") }} '>
                             {!! __('text.blog') !!}
                         </a>
                     </li>
