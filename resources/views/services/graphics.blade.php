@@ -114,8 +114,8 @@
 				<div class="col s12 xl6">
 					<div class="services-background-green">
 						<h2>BRANDING<span><div class="green-point"></div>LOGÓ ÉS ARCULAT</span></h2>
-						<p><b>Felmérés, tervezés, tesztelés, véglegesítés.</b></p>
-						<p><b>Felhasználóbarát weboldalak és mobil appok létrehozása, melyeket élmény használni. Te tudod, hogy milyen színű gombot kattintanak a leggyakrabban? Vagy, hogy melyik színnek mi az üzenete?</b></p>
+						<p><b>Tervezőgrafikusaink képesek vizuálisan megvalósítani azt, amit kommunikálni szeretnél.</b></p>
+						<p><b>Elkészítjük vállalkozásod teljes arculatát és logóját is!</b></p>
 					</div>
 				</div>
 				<div class="col s12 xl6 center hide-under-1200">
@@ -155,6 +155,10 @@
 	</section>
 	<!-- services graphic end -->
 
+	<!--GALÉRIA-->
+        @include('content.gallery')
+    <!--GALÉRIA END-->
+
     <!--FOOTER-->
         @include('content.footer')
     <!--FOOTER END-->
@@ -172,7 +176,8 @@
 	<script type="text/javascript" src="/js/custom.js"></script>
 	<script type="text/javascript" src="/js/services-validation.js"></script>
 	<!-- gallery js -->
-	{{--  <script src="/js/gallery.js"></script>  --}}
+	<script src="/js/gallery_lang.js"></script>
+	<script src="/js/gallery.js"></script>
 	<!-- gallery js end -->
 </body>
 </html>

@@ -91,7 +91,7 @@
 				<button class="gallery-filter filter-button" data-filter="marketing">online marketing</button>
 				<button class="gallery-filter filter-button" data-filter="Startup">startup</button>
 				<button class="gallery-filter filter-button" data-filter="Fejlesztés">fejlesztés</button>
-			</div>
+            </div>
             @if(count($bloglist) > 0)
                 @foreach($bloglist->all() as $blog)
                     <div class="col s12 m6 xl4 filter {!! $blog->blog_category !!}">
@@ -102,7 +102,7 @@
                             </div>
                             <div class="card-content">
                                 <div class="card-kategoria">
-                                    {!! $blog->category_name !!}
+                                    {!! $blog->blog_category !!}
                                 </div>
                                 <div class="card-cim">
                                     {!! $blog->blog_title !!}

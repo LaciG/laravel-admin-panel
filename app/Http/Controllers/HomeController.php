@@ -26,7 +26,7 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request){
-        $bloglist = DB::table('blog')->join('categories','blog.blog_category', '=', 'categories.id')->select('blog.*', 'categories.name as category_name')->orderBy('created_at', 'desc')->paginate(5);        
+        $bloglist = DB::table('blog')->orderBy('created_at', 'desc')->paginate(5);        
         $joblist = DB::table('carrier')->orderBy('created_at', 'desc')->paginate(5);
 
         return view('home', ['bloglist' => $bloglist, 'joblist' => $joblist]);

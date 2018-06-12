@@ -160,6 +160,10 @@
 	</section>
 	<!-- services-marketing end -->
 
+	<!--GALÉRIA-->
+        @include('content.gallery')
+    <!--GALÉRIA END-->
+
     <!--FOOTER-->
         @include('content.footer')
     <!--FOOTER END-->
@@ -177,7 +181,8 @@
 	<script type="text/javascript" src="/js/custom.js"></script>
 	<script type="text/javascript" src="/js/services-validation.js"></script>
 	<!-- gallery js -->
-	{{--  <script src="/js/gallery.js"></script>  --}}
+	<script src="/js/gallery_lang.js"></script>
+	<script src="/js/gallery.js"></script>
 	<!-- gallery js end -->
 </body>
 </html>

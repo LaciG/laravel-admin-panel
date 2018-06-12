@@ -89,9 +89,84 @@
 			</div>
 		</div>
 	</div>
-	<!-- header-services end -->
+    <!-- header-services end -->
     
+    <!-- services webdevelop -->
+	<section id="gdpr-infografika">
+		<div class="container">
+
+			<div class="row">
+				<div class="col s12 xl6 center"><img class="responsive-img" src="assets/svg/services/services-webdevelop-webdevelop.svg" alt="marketing stratégia">
+				</div>
+				<div class="col s12 xl6">
+					<div class="">
+						<h2>DEVELOPMENT<span><div class="green-point"></div>WEBFEJLESZTÉS</span></h2>
+						<p><b>Tűnj ki honlapoddal a tömegből.</b></p>
+						<p>Napjainkban elveszel a zajban, ha nem vagy jelen az online térben.</p>
+						<p>Wordpress és egyedi weboldalakat készítünk, igényeid szerint testre szabva.</p>
+						<p>Gondoskodunk róla, hogy megkapd a legprofibb bemutatkozást vállalkozásod részére, kizárólag a legmodernebb eljárásokkal és eszközökkel dolgozunk, a vállalkozásod igényeidhez igazítva.</p>
+						<p>Mobile first metódus alapján reszponzív oldalakat készítünk.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col s12 xl6 center hide-over-1200">
+					<img class="responsive-img" src="assets/svg/services/services-webdevelop-webshop.svg" alt="marketing stratégia">
+				</div>
+				<div class="col s12 xl6">
+					<div class="services-background-green">
+						<h2>WEBSHOP<span><div class="green-point"></div>WEBÁRUHÁZ KÉSZÍTÉS</span></h2>
+						<p><b>Hatékony és forgalomnövelő webáruházat készítünk a legmodernebb eszközökkel számodra.</b></p>
+						<p>Mai világban igazán fontos egy jó és megbízható online áruház is üzletednek. Nyílt forráskódú rendszerekkel és eszközökkel dolgozunk, amit könnyedén szabadon tudunk módosítani, hogy minél jobban személyre szabhassuk neked, ami elengedhetetlen lesz számodra, hogy az üzleted pillanatok alatt a csúcsra juttathasd.</p>
+						<p>A projekt átadása után is együttműködünk veled és szívesen segítünk bármiben.</p>
+					</div>
+				</div>
+				<div class="col s12 xl6 center hide-under-1200">
+					<img class="responsive-img" src="assets/svg/services/services-webdevelop-webshop.svg" alt="marketing stratégia">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col s12 xl6 center"><img class="responsive-img" src="assets/svg/services/services-webdevelop-crm.svg" alt="marketing stratégia">
+				</div>
+				<div class="col s12 xl6">
+					<div class="">
+						<h2>CRM SYSTEM<span><div class="green-point"></div>CRM RENDSZEREK</span></h2>
+						<p><b>Szabd egyedire már meglévő CRM rendszered vagy el is készíthetünk egy teljesen újat.</b></p>
+						<p>A CRM rendszerek többsége nehezen átlátható, bonyolult, nehezen tanulható, de erre tudunk megoldást kínálni neked. Ugye neked se mindegy, hogyan tartod a kapcsolatot az ügyfelekkel, hogyan tudod őket kiszolgálni vagy éppen mennyi időt ölel fel egy ilyen rendszer adminisztrálása és kezelése.</p>
+						<p>A megoldás egy teljesen egyedi ügyfélkapcsolat-kezelő felület kialakítása, ami teljesen a te igényeid alapján készül el. UX kutatóink felmérik neked, mire van szükséged és egy tökéletes rendszert tervezünk meg neked.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col s12 xl6 center hide-over-1200">
+					<img class="responsive-img" src="assets/svg/services/services-webdevelop-gdpr.svg" alt="marketing stratégia">
+				</div>
+				<div class="col s12 xl6">
+					<div class="services-background-green">
+						<h2>GDPR<span><div class="green-point"></div>GDPR FELKÉSZÍTÉS</span></h2>
+						<p><b>Professzionális GDPR tanácsadás:</b></p>
+						<p>Adatvagyon felmérés a jelenlegi adatkezelési folyamatok megismerése</p>
+						<p>Adatvagyon-leltár elkészítése</p>
+						<p>GDPR analízis, hiányosságok feltárása, szükséges módosítások összegyűjtése</p>
+						<p>Szabályzat készítés</p>
+						<p>Szükség esetén szoftver bevezetés</p>
+					</div>
+				</div>
+				<div class="col s12 xl6 center hide-under-1200">
+					<img class="responsive-img" src="assets/svg/services/services-webdevelop-gdpr.svg" alt="marketing stratégia">
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- services webdevelop end -->
     
+    <!--GALÉRIA-->
+        @include('content.gallery')
+    <!--GALÉRIA END-->
 
     <!--FOOTER-->
         @include('content.footer')
@@ -109,8 +184,9 @@
 	<!-- custom js -->
 	<script type="text/javascript" src="/js/custom.js"></script>
 	<script type="text/javascript" src="/js/services-validation.js"></script>
-	<!-- gallery js -->
-	{{--  <script src="/js/gallery.js"></script>  --}}
+    <!-- gallery js -->
+    <script src="/js/gallery_lang.js"></script>
+	<script src="/js/gallery.js"></script>
 	<!-- gallery js end -->
 </body>
 </html>

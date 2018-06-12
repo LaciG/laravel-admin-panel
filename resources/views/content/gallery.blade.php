@@ -31,13 +31,12 @@
 		<div id="imgtemplate" style="display: none">
             <div class="gallery_product col s12 m6 l4 filter startup view view-first"> <img src="/assets/portfoliok/startupok/15minpizza.jpg" class="responsive-img gallery_one">
                 <div class="mask">
-                        <?php $lang['our_start1_title'] = "15minutespizza.com";
-                        $lang['our_start1_text'] = "15 percen belül pizza a belvárosban!"; ?>
+
                     <h2 class="image_title">
-                        <?php echo $lang['our_start1_title']; ?>
+                        
                     </h2>
                     <p class="image_subtitle">
-                        <?php echo $lang['our_start1_text']; ?>
+                        
                     </p>
                 </div>
             </div>

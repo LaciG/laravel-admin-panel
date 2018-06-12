@@ -29,40 +29,40 @@
 
                     <table width="100%" border="1">
                         <tr class="card-header">
-                            <td colspan="2">Blog bejegyzések</td>
+                            <td colspan="3">Blog bejegyzések</td>
                         </tr>
                         <tr>
-                            <td>Cím</td><td>Kategória</td>
+                            <td>Cím</td><td>Kategória</td><td>Publikálva:</td>
                         </tr>
                         @if(count($bloglist) > 0)
                             @foreach($bloglist->all() as $blog)
                                 <tr>
-                                    <td> {{ $blog->blog_title }} </td><td> {{ $blog->category_name }} </td>
+                                    <td> {{ $blog->blog_title }} </td><td> {{ $blog->blog_category }} </td><td> {{ date('M j, Y H:i', strtotime($blog->created_at)) }} </td>
                                 </tr>
                             @endforeach
                         @else
                         <tr>
-                            <td align="center" colspan="2">Nincs blogbejegyzés!</td>
+                            <td align="center" colspan="3">Nincs blogbejegyzés!</td>
                         </tr>
                         @endif
                     <table>
 
                     <table width="100%" border="1">
                         <tr class="card-header">
-                            <td colspan="2">Aktív álláshirdetések</td>
+                            <td colspan="3">Aktív álláshirdetések</td>
                         </tr>
                         <tr>
-                            <td>Állás neve</td><td>Típusa</td>
+                            <td>Állás neve</td><td>Típusa</td><td>Feladva:</td>
                         </tr>
                         @if(count($joblist) > 0)
                             @foreach($joblist->all() as $job )
                                 <tr>
-                                    <td> {{ $job->job_title }} </td><td> {{ $job->job_type }} </td>
+                                    <td> {{ $job->job_title }} </td><td> {{ $job->job_type }} </td><td> {{ date('M j, Y H:i', strtotime($job->created_at)) }} </td>
                                 </tr>
                             @endforeach
                         @else
                         <tr>
-                            <td align="center" colspan="2">Nincs aktív álláshirdetés!</td>
+                            <td align="center" colspan="3">Nincs aktív álláshirdetés!</td>
                         </tr>
                         @endif
                     <table>

@@ -120,26 +120,31 @@
 
 		</div>
 	</section>
-	<!-- services app end-->
+    <!-- services app end-->
+    
+    <!--GALÉRIA-->
+        @include('content.gallery')
+    <!--GALÉRIA END-->
 
     <!--FOOTER-->
         @include('content.footer')
     <!--FOOTER END-->
 
-    <!-- import jQuery before materialize.js-->
+    <!-- import jQuery before materialize js-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 	<!-- owl carousel -->
 	<script src="/js/owl.carousel.min.js"></script>
 
-	<!-- import materialize.js-->
+	<!-- import materialize js-->
 	<script type="text/javascript" src="/js/materialize.min.js"></script>
 
 	<!-- custom js -->
 	<script type="text/javascript" src="/js/custom.js"></script>
 	<script type="text/javascript" src="/js/services-validation.js"></script>
-	<!-- gallery js -->
-	{{--  <script src="/js/gallery.js"></script>  --}}
+    <!-- gallery js -->
+    <script src="/js/gallery_lang.js"></script>
+	<script src="/js/gallery.js"></script>
 	<!-- gallery js end -->
 </body>
 </html>

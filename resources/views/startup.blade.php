@@ -100,15 +100,23 @@
         <!--NAVBAR-->
             @include('content.navbar')
         <!--NAVBAR END-->
+
         <!--HEADER-->
             @include('content.startup-header')
         <!--HEADER END-->
+
         <!--STARTUP INFOGRAPHY-->
             @include('content.startup-infography')
         <!--STARTUP INFOGRAPHY END-->
+
         <!-- METHODOLOGY -->
             @include('content.startup-methodology')
         <!-- METHODOLOGY END -->
+
+        <!--GALÉRIA-->
+          @include('content.gallery')
+        <!--GALÉRIA END-->
+        
         <!--GALLERY STARTUP-->
             @include('content.startup-awards')
         <!--GALLERY STARTUP END-->
@@ -130,8 +138,9 @@
 	<script type="text/javascript" src="/js/custom.js"></script>
 	<script type="text/javascript" src="/js/contact-validation.js"></script>
 	
-	<!-- gallery js -->
-	{{--  <script src="/js/gallery.js"></script>  --}}
+  <!-- gallery js -->
+  <script src="/js/gallery_lang.js"></script>
+	<script src="/js/gallery.js"></script>
 	<!-- gallery js end -->
     </body>
 </html>

@@ -116,21 +116,27 @@
             </div>
         </div>
     <!--HEADER END-->
+
     <!--INFOGRAFIKA-->
         @include('content.infographics')
     <!--INFOGRAFIKA END-->
+
     <!--GALÉRIA-->
-    {{--  TODO:: GALÉRIÁT MEGCSINÁLNI  --}}
+        @include('content.gallery')
     <!--GALÉRIA END-->
+
     <!--CLIENT LOGOS-->
         @include('content.client-logos')
     <!--CLIENT LOGOS END-->
+
     <!--AWARDS-->
         @include('content.index-awards')
     <!--AWARDS END-->
+
     <!--NEWSLETTER-->
         @include('content.newsletter')
     <!--NEWSLETTER END-->
+    
     <!--FOOTER-->
         @include('content.footer')
     <!--FOOTER END-->
@@ -147,8 +153,9 @@
 	<!-- custom js -->
 	<script type="text/javascript" src="/js/custom.js?v=1.02"></script>
 	<script type="text/javascript" src="/js/contact-validation.js"></script>
-	<!-- gallery js -->
-	{{--  <script src="/js/gallery.js"></script>  --}}
+    <!-- gallery js -->
+    <script src="/js/gallery_lang.js"></script>
+	<script src="/js/gallery.js"></script>
 	<!-- gallery js end -->
 	
 	<!-- cookie disclaimer js -->

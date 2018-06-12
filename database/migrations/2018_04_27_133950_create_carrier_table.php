@@ -24,7 +24,7 @@ class CreateCarrierTable extends Migration
             $table->text('job_time');
             $table->text('job_level');
             $table->text('job_goodtoknow');
-            $table->text('job_active');
+            $table->enum('job_active', ['Y', 'N'])->default('Y');
             $table->text('job_meta_description');
             $table->text('job_meta_keywords');
 
