@@ -53,9 +53,6 @@ function navbar() {
 	}
 	if (bodyId === 'services-app' || bodyId === 'services-marketing' || bodyId === 'services-graphic' || bodyId === 'services-webdevelop') {
 		$('#' + bodyId + ' li a:contains(SZOLGÁLTATÁSOK)').parent().addClass('activeNav');
-		/*$('#' + bodyId + ' li a:contains(App)').parent().addClass('activeNav');
-		$('#' + bodyId + ' li a:contains(Grafikai)').parent().addClass('activeNav');
-		$('#' + bodyId + ' li a:contains(Webfejlesztés)').parent().addClass('activeNav');*/
 	}
 	if (bodyId === 'startup') {
 		$('#' + bodyId + ' li a:contains(STARTUP)').parent().addClass('activeNav');
@@ -78,11 +75,8 @@ $(document).ready(function () {
 		$('#blog-buttons .active').removeClass('active');
 		$(this).addClass('active');
 		if (value == "all") {
-			//$('.filter').removeClass('hidden');
 			$('.filter').show(1000);
 		} else {
-			//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-			//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
 			$('.filter').not('.' + value).hide(1000);
 			$('.filter').filter('.' + value).show(1000);
 		}
@@ -213,41 +207,6 @@ $(document).ready(function () {
 });
 /* carousel end */
 
-/* scroll  animate */
-// Select all links with hashes
-/*$('a[href*="#"]')
-	
-	.not('[href="#"]')
-	.not('[href="#0"]')
-	.click(function (event) {
-		if (
-			location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
-			location.hostname == this.hostname
-		) {
-			
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-			
-			if (target.length) {
-				
-				event.preventDefault();
-				$('html, body').animate({
-					scrollTop: target.offset().top
-				}, 1000, function () {
-					
-					var $target = $(target);
-					$target.focus();
-					if ($target.is(":focus")) {
-						return false;
-					} else {
-						$target.attr('tabindex', '-1'); 
-						$target.focus(); 
-					}
-				});
-			}
-		}
-	});*/
-/* scroll  animate end */
 $(document).ready(function(){
 	var pageHref = window.location.href;
 	if(pageHref === 'https://drukka.hu/gdpr'){

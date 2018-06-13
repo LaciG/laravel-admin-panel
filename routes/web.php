@@ -97,3 +97,5 @@ Auth::routes();
     Route::post('/gdprsettings/{id}/edit', 'GdprSettingsController@edit');
 
     Route::get('/gdprstatistics', 'GdprStatisticsController@index');
+
+    Route::post('/calculate', 'AjaxController@getCalculatorData');

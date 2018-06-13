@@ -34,7 +34,8 @@
             <meta name="robots" content="noindex, nofollow">
             <meta name="revisit-after" content="1 days">
             <meta name="author" content="Drukka Startup Studio">
-            <meta property="og:image" content="https://drukka.hu/assets/img/drukka_thumbnail.jpg">
+			<meta property="og:image" content="https://drukka.hu/assets/img/drukka_thumbnail.jpg">
+			<meta name="csrf-token" content="{{ csrf_token() }}">
             <title>Drukka.hu GDPR</title>
         
         <!-- cookie -->
@@ -62,7 +63,11 @@
           }
         })});
         </script>
-        <!-- cookie end -->
+		<!-- cookie end -->
+		
+		<script type="text/javascript">
+			var secure_token = '{{ csrf_token() }}';
+		</script>
         
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -269,6 +274,7 @@
 			<div class="col s12 m8 offset-m2">
 				<div class="calculator-div">
 					<form method="post">
+							<input type="hidden" name="_token" value="{{ csrf_token() }}">
 					<input type="hidden" name="function" value="calculate">
 						<div class="calculator-icon"><img src="" alt="">
 						</div>
