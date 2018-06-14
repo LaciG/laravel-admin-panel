@@ -50,6 +50,24 @@ class AjaxController extends Controller
                     'followprice' => $gdpr_data->follow_price
                 )
             );
+        } elseif($package_name == "Biztonság") {
+            $response = array(
+                'packdata' => array(
+                    'workers' => $calculatorData['workers'],
+                    'clients' => $calculatorData['clients'],
+                    'industry' => $calculatorData['industry'],
+                    'process' => $calculatorData['process'],
+                    'law' => $calculatorData['law'],
+                    'hr' => $calculatorData['hr'],
+                    'payroll' => $calculatorData['payroll'],
+                    'it' => $calculatorData['it'],
+                    'incident' => $calculatorData['incident'],
+                ),
+                'nodatasecure' => array(
+                    'packname' => $package_name,
+                    'standardpackage' => $gdpr_data->Biztonság,
+                )
+            );
         } else {
             $response = array(
                 'packdata' => array(

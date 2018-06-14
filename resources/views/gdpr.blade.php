@@ -367,6 +367,7 @@
 								<option value="Enterprise">GDPR Enterprise</option>
 								<option value="Követés">GDPR KÖVETÉS</option>
 								<option value="DPO">ADATVÉDELMI FELELŐS KIHELYEZÉS</option>
+								<option value="Biztonság">Biztonság</option>
 							</select>
 							<label>Melyik csomagunkra kéri az ajánlatot?</label>
 						</div></div>
