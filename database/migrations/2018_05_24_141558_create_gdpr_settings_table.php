@@ -21,8 +21,9 @@ class CreateGdprSettingsTable extends Migration
             $table->string('Light', 11);
             $table->string('Standard', 11);
             $table->string('Enterprise', 11);
-            $table->string('Follow', 11);
+            $table->string('Követés', 11);
             $table->integer('DPO');
+            $table->integer('Biztonság', 11);
             $table->string('daily_price', 11);
             $table->string('follow_price', 11);
 
